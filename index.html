@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TRANSPARENT-FORM | JCFcodex</title>
+    <link rel="website icon" type="image/png" sizes="32x32" href="image/logo.png" />
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Poppins -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <a href="index.html"><img src="image/logo.png" alt="JCFcodex" /></a>
+      </div>
+      <div class="menu-icon" id="hamburger-menu-btn">
+        <ion-icon name="menu"></ion-icon>
+      </div>
+      <nav class="navigation">
+        <ul>
+          <li><a href="#home" class="nav active">Home</a></li>
+          <li><a href="#about" class="nav">About</a></li>
+          <li><a href="#services" class="nav">Services</a></li>
+          <li><a href="#contact" class="nav">Contact</a></li>
+        </ul>
+        <ul class="nav-buttons">
+          <li id="login-btn" class="nav-btn loginBtn">
+            <a href="#">Log In</a>
+          </li>
+          <li id="signup-btn" class="nav-btn signupBtn">
+            <a href="#">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="hamburger" id="menu-container">
+      <div class="close-menu" id="close-menu-btn">
+        <ion-icon name="close"></ion-icon>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#home" class="nav active">Home</a></li>
+          <li><a href="#about" class="nav">About</a></li>
+          <li><a href="#services" class="nav">Services</a></li>
+          <li><a href="#contact" class="nav">Contact</a></li>
+        </ul>
+        <ul class="nav-buttons">
+          <li id="hb-login-btn" class="nav-btn loginBtn">
+            <a href="#">Log In</a>
+          </li>
+          <li id="hb-signup-btn" class="nav-btn signupBtn">
+            <a href="#">Sign Up</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="wrapper" id="wrapper">
+      <div class="close-btn" id="closeBtn">
+        <span><ion-icon name="close"></ion-icon></span>
+      </div>
+      <div class="container login" id="login-container">
+        <div class="title"><h1>Login</h1></div>
+        <form action="#">
+          <div class="input">
+            <input
+              type="email"
+              id="login-email"
+              autocomplete="off"
+              spellcheck="false"
+              required
+            />
+            <label for="login-email" id="login-email-label">Email</label>
+            <span class="icon active" id="lg-email-icon"
+              ><ion-icon name="mail-outline"></ion-icon
+            ></span>
+            <span class="icon-focus" id="lg-email-filled-icon"
+              ><ion-icon name="mail"></ion-icon
+            ></span>
+          </div>
+          <div class="input">
+            <input
+              type="password"
+              id="login-password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            />
+            <label for="login-password" id="login-password-label"
+              >Password</label
+            >
+            <span class="icon active" id="lg-pass-icon"
+              ><ion-icon name="lock-closed-outline"></ion-icon
+            ></span>
+            <span class="icon-focus" id="lg-pass-filled-icon"
+              ><ion-icon name="lock-closed"></ion-icon
+            ></span>
+          </div>
+          <div class="button">
+            <button type="submit" class="submit-btn">Login</button>
+          </div>
+        </form>
+        <div class="forgot">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <div class="link-to-signup">
+          <p>Don't have an account? <a href="#" id="signup">Signup</a></p>
+        </div>
+        <div class="or">
+          <p>OR</p>
+        </div>
+        <div class="login-with">
+          <div class="link google">
+            <span><ion-icon name="logo-google"></ion-icon></span>
+            <a href="#">Continue with Google</a>
+          </div>
+          <div class="link facebook">
+            <span><ion-icon name="logo-facebook"></ion-icon></span>
+            <a href="#">Continue with Facebook</a>
+          </div>
+        </div>
+      </div>
+      <div class="container signup" id="signup-container">
+        <div class="title"><h1>Signup</h1></div>
+        <form action="#">
+          <div class="input">
+            <input
+              type="text"
+              id="username"
+              autocomplete="off"
+              spellcheck="false"
+              minlength="6"
+              required
+            />
+            <label for="username" id="username-label">Username</label>
+            <span class="icon active" id="sg-user-icon"
+              ><ion-icon name="person-outline"></ion-icon
+            ></span>
+            <span class="icon-focus" id="sg-user-filled-icon"
+              ><ion-icon name="person"></ion-icon
+            ></span>
+          </div>
+          <div class="input">
+            <input
+              type="email"
+              id="signup-email"
+              autocomplete="off"
+              spellcheck="false"
+              required
+            />
+            <label for="signup-email" id="signup-email-label">Email</label>
+            <span class="icon active" id="sg-email-icon"
+              ><ion-icon name="mail-outline"></ion-icon
+            ></span>
+            <span class="icon-focus" id="sg-email-filled-icon"
+              ><ion-icon name="mail"></ion-icon
+            ></span>
+          </div>
+          <div class="input">
+            <input
+              type="password"
+              id="signup-password"
+              autocomplete="new-password"
+              minlength="8"
+              required
+            />
+            <label for="signup-password" id="signup-password-label"
+              >Password</label
+            >
+            <span class="icon active" id="sg-pass-icon"
+              ><ion-icon name="lock-closed-outline"></ion-icon
+            ></span>
+            <span class="icon-focus" id="sg-pass-filled-icon"
+              ><ion-icon name="lock-closed"></ion-icon
+            ></span>
+          </div>
+          <div class="button">
+            <button type="submit" class="submit-btn">Signup</button>
+          </div>
+        </form>
+        <div class="forgot">
+          <a href="#">Forgot Password?</a>
+        </div>
+        <div class="link-to-signup">
+          <p>Already have an account? <a href="#" id="login">Login</a></p>
+        </div>
+        <div class="or">
+          <p>OR</p>
+        </div>
+        <div class="login-with">
+          <div class="link google">
+            <span><ion-icon name="logo-google"></ion-icon></span>
+            <a href="#">Signup with Google</a>
+          </div>
+          <div class="link facebook">
+            <span><ion-icon name="logo-facebook"></ion-icon></span>
+            <a href="#">Signup with Facebook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="./script/script.js"></script>
+  </body>
+</html>
+
+<!-- JCFcodex -->
