@@ -216,6 +216,7 @@ input {
   outline: none;
   background-color: transparent;
   padding: 0.5rem 2.1rem 0.5rem 0.5rem;
+  color: #1f2138;
   font-weight: 600;
   font-size: 1.15rem;
   border-bottom: 2px solid #373a5d;
