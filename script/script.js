@@ -56,87 +56,81 @@ function validityCheck(input, icon) {
     }
   } */
 }
+function handleInputFocus(input, label, filledIcon, unfilledIcon) {
+  if (document.activeElement === input) {
+    if (input.value.trim() !== "") {
+      label.style.top = "0.3rem";
+      validityCheck(input, filledIcon);
+      toggleActiveClass(filledIcon, unfilledIcon);
+    } else {
+      label.style.top = "50%";
+      toggleActiveClass(unfilledIcon, filledIcon);
+    }
+  } else {
+    toggleActiveClass(unfilledIcon, filledIcon);
+  }
+}
 
 loginEmailInput.addEventListener("input", function () {
-  function checkFocusState() {
-    if (document.activeElement === loginEmailInput) {
-      validityCheck(loginEmailInput, loginEmailFilledIcon);
-      toggleActiveClass(loginEmailFilledIcon, loginEmailIcon);
-    } else {
-      toggleActiveClass(loginEmailIcon, loginEmailFilledIcon);
-    }
-  }
-  setInterval(checkFocusState, 100);
-  if (loginEmailInput.value.trim() !== "") {
-    loginEmailLabel.style.top = "0.3rem";
-  } else {
-    loginEmailLabel.style.top = "50%";
-  }
+  setInterval(
+    () =>
+      handleInputFocus(
+        loginEmailInput,
+        loginEmailLabel,
+        loginEmailFilledIcon,
+        loginEmailIcon
+      ),
+    100
+  );
 });
 loginPasswordInput.addEventListener("input", function () {
-  function checkFocusState() {
-    if (document.activeElement === loginPasswordInput) {
-      validityCheck(loginPasswordInput, loginPassFilledIcon);
-      toggleActiveClass(loginPassFilledIcon, loginPassIcon);
-    } else {
-      toggleActiveClass(loginPassIcon, loginPassFilledIcon);
-    }
-  }
-  setInterval(checkFocusState, 100);
-  if (loginPasswordInput.value.trim() !== "") {
-    loginPasswordLabel.style.top = "0.3rem";
-  } else {
-    loginPasswordLabel.style.top = "50%";
-  }
+  setInterval(
+    () =>
+      handleInputFocus(
+        loginPasswordInput,
+        loginPasswordLabel,
+        loginPassFilledIcon,
+        loginPassIcon
+      ),
+    100
+  );
 });
 
 usernameInput.addEventListener("input", function () {
-  function checkFocusState() {
-    if (document.activeElement === usernameInput) {
-      validityCheck(usernameInput, signupUserFilledIcon);
-      toggleActiveClass(signupUserFilledIcon, signupUserIcon);
-    } else {
-      toggleActiveClass(signupUserIcon, signupUserFilledIcon);
-    }
-  }
-  setInterval(checkFocusState, 100);
-  if (usernameInput.value.trim() !== "") {
-    usernameLabel.style.top = "0.3rem";
-  } else {
-    usernameLabel.style.top = "50%";
-  }
+  setInterval(
+    () =>
+      handleInputFocus(
+        usernameInput,
+        usernameLabel,
+        signupUserFilledIcon,
+        signupUserIcon
+      ),
+    100
+  );
 });
 signupEmailInput.addEventListener("input", function () {
-  function checkFocusState() {
-    if (document.activeElement === signupEmailInput) {
-      validityCheck(signupEmailInput, signupEmailFilledIcon);
-      toggleActiveClass(signupEmailFilledIcon, signupEmailIcon);
-    } else {
-      toggleActiveClass(signupEmailIcon, signupEmailFilledIcon);
-    }
-  }
-  setInterval(checkFocusState, 100);
-  if (signupEmailInput.value.trim() !== "") {
-    signupEmailLabel.style.top = "0.3rem";
-  } else {
-    signupEmailLabel.style.top = "50%";
-  }
+  setInterval(
+    () =>
+      handleInputFocus(
+        signupEmailInput,
+        signupEmailLabel,
+        signupEmailFilledIcon,
+        signupEmailIcon
+      ),
+    100
+  );
 });
 signupPasswordInput.addEventListener("input", function () {
-  function checkFocusState() {
-    if (document.activeElement === signupPasswordInput) {
-      validityCheck(signupPasswordInput, signupPassFilledIcon);
-      toggleActiveClass(signupPassFilledIcon, signupPassIcon);
-    } else {
-      toggleActiveClass(signupPassIcon, signupPassFilledIcon);
-    }
-  }
-  setInterval(checkFocusState, 100);
-  if (signupPasswordInput.value.trim() !== "") {
-    signupPasswordLabel.style.top = "0.3rem";
-  } else {
-    signupPasswordLabel.style.top = "50%";
-  }
+  setInterval(
+    () =>
+      handleInputFocus(
+        signupPasswordInput,
+        signupPasswordLabel,
+        signupPassFilledIcon,
+        signupPassIcon
+      ),
+    100
+  );
 });
 
 const loginBtn = document.getElementById("login-btn");
