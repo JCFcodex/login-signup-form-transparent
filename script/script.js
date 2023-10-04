@@ -39,14 +39,41 @@ const signupEmailFilledIcon = document.getElementById("sg-email-filled-icon");
 const signupPassFilledIcon = document.getElementById("sg-pass-filled-icon");
 
 /* validity checker */
+/* 
+
+function buttonClick(input) {
+  submitBtn.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+
+    });
+  });
+} */
+
+/* const submitBtn = document.querySelectorAll("#sub-btn"); */
+
 function validityCheck(input, icon) {
   if (input) {
     if (!input.checkValidity()) {
       icon.style.color = "#fc5858";
+      input.classList.add("active");
     } else {
       icon.style.color = "#89ff89";
+      input.classList.remove("active");
     }
   }
+
+  /*   submitBtn.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      console.log(input);
+      if (input) {
+        if (!input.checkValidity()) {
+          input.classList.add("active");
+        } else {
+          input.classList.remove("active");
+        }
+      }
+    });
+  }); */
 
   /*  if (inputType === "password" || inputType === "text") {
     if (input.value.length < parseInt(input.getAttribute("minlength"))) {
@@ -58,15 +85,17 @@ function validityCheck(input, icon) {
 }
 function handleInputFocus(input, label, filledIcon, unfilledIcon) {
   if (document.activeElement === input) {
-    if (input.value.trim() !== "") {
+    if (input.value !== "") {
       label.style.top = "0.3rem";
       validityCheck(input, filledIcon);
       toggleActiveClass(filledIcon, unfilledIcon);
     } else {
       label.style.top = "50%";
       toggleActiveClass(unfilledIcon, filledIcon);
+      input.classList.remove("active");
     }
   } else {
+    input.classList.remove("active");
     toggleActiveClass(unfilledIcon, filledIcon);
   }
 }
