@@ -44,7 +44,7 @@ header {
 
 .logo {
   width: 75px;
-  opacity: .9;
+  opacity: 0.9;
 }
 
 .logo a {
@@ -223,6 +223,10 @@ input {
   transition: border-bottom-color 0.25s ease;
 }
 
+input.active {
+  animation: shake 0.35s ease 1;
+}
+
 input:focus {
   border-bottom-color: #1873eb;
 }
@@ -230,6 +234,7 @@ input:focus {
 input:focus ~ label {
   color: #1873eb;
 }
+
 /* 
 input:focus ~ .icon.active  {
   opacity: 0;
@@ -520,6 +525,27 @@ ion-icon {
   100% {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(-5px);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+  80% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
